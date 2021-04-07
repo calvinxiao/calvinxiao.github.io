@@ -7,6 +7,6 @@ categories: performance
 
 I was trying to optimize structs in tidb, I need to find some critical paths first.
 
-Foudn this issue [pingcap/tidb:11629](https://github.com/pingcap/tidb/pull/11629)
+Foudn this issue [pingcap/tidb#11629](https://github.com/pingcap/tidb/pull/11629)
 
 Also the `golangci-lint` tool is great
