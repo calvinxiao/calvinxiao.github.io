@@ -163,9 +163,11 @@ ok      command-line-arguments  25.139s
 ```
 
 Most of the time, using mutex is good enough to avoid race condition. Yet using atomic(lock free) 
-data structures are usually faster, in this case **4.8x**
+data structures is usually faster, in this case **4.8x**
 
 In methods `BenchmarkCachelineArray%d` I use an array to store different result for different goroutine.
+
+The method `BenchmarkCachelineArray12` is **231x** faster then using mutex.
 
 Take `BenchmarkCachelineArray8` for example, the 1st goroutine update total[0], the 2nd one update total[8], `int` is 4 bytes, so total[0] and total[8] is 32(31?) bytes away.
 
