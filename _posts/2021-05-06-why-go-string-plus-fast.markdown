@@ -76,9 +76,11 @@ func BenchmarkStringBuilder(b *testing.B) {
 	}
 }
 
+```
+
 ## 2. Result
 
-```
+```bash
 BenchmarkStringPlus-16             19687             59930 ns/op          303122 B/op          1 allocs/op
 BenchmarkStringJoin-16             18229             66459 ns/op          303123 B/op          1 allocs/op
 BenchmarkStringBuffer-16            6722            155969 ns/op          712756 B/op          3 allocs/op
@@ -87,6 +89,7 @@ BenchmarkStringBuilder-16           8328            128893 ns/op          655401
 
 ## 3. `disasm` Memory Profile
 
+```bash
 # go tool pprof mem.prof
 # disasm BenchmarkStringPlus
 
